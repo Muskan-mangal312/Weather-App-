@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('Background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+}
+
+.whether-app {
+    color: #cabdbd;
+    text-align: center; /* Center the title text */
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.right-side {
+    padding-left: 20px;
+}
+
+#icon {
+    margin-bottom: 20px;
+    font-size: 150px; /* Adjusted size for responsiveness */
+    color: #c5c7ca;
+}
+
+#dateTime {
+    font-size: 16px; /* Adjusted font size for responsiveness */
+    color: #cabdbd;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: calc(100% - 90px); /* Full width minus button width */
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#weatherInfo {
+    margin-top: 20px;
+    color: #cabdbd;
+}
+
+.weather-icon {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.weather-details h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left; /* Center align text and icon */
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Display elements in a row on larger screens */
+    }
+
+    .left-side {
+        margin-bottom: 0;
+        padding-right: 20px; /* Adjust padding on larger screens */
+    }
+
+    #icon {
+        font-size: 200px; /* Larger icon size for bigger screens */
+    }
+
+    #dateTime {
+        font-size: 18px;
+    }
+
+    input {
+        width: calc(100% - 110px); /* Adjust input width for larger screens */
+    }
+}
